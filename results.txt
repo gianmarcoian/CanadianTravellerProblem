@@ -1,0 +1,92 @@
+A run showing an optimal result on the probabilistic algorithm:
+
+BFS - deterministic solution
+An optimal solution:
+[0, 1, 6, 9]
+Total hops = 3
+
+DFS - probabilistic solution
+On vertex: 0
+Going on edge (0,3) edge prob = 100
+On vertex: 3
+Going on edge (3,8) edge prob = 50% r = 24
+On vertex: 8
+Going on edge (8,9) edge prob = 10% r = 3
+Total DFS hops = 3
+Total DFS misses = 0
+Path = [0, 3, 8, 9]
+
+
+
+
+A run showing a fair result on the probabilistic algorithm:
+
+
+BFS - deterministic solution
+An optimal solution:
+[0, 1, 6, 9]
+Total hops = 3
+
+DFS - probabilistic solution
+On vertex: 0
+Going on edge (0,2) edge prob = 100
+On vertex: 2
+Going on edge (2,4) edge prob = 100
+On vertex: 4
+Cannot go on edge (4,7) edge prob = 30% r = 81
+Going on edge (4,1) edge prob = 70% r = 25
+On vertex: 1
+Going on edge (1,6) edge prob = 100
+On vertex: 6
+Going on edge (6,9) edge prob = 100
+Total DFS hops = 5
+Total DFS misses = 1
+Path = [0, 2, 4, 1, 6, 9]
+
+
+
+A run showing a poor result on the probabilistic algorithm:
+
+
+BFS - deterministic solution
+An optimal solution:
+[0, 1, 6, 9]
+Total hops = 3
+
+DFS - probabilistic solution
+On vertex: 0
+Going on edge (0,1) edge prob = 100
+On vertex: 1
+Going on edge (1,4) edge prob = 70% r = 50
+On vertex: 4
+Going on edge (4,7) edge prob = 30% r = 17
+On vertex: 7
+Cannot go on edge (7,5) edge prob = 10% r = 92
+Cannot go on edge (7,9) edge prob = 80% r = 95
+Backtracking to vertex: 4
+On vertex: 4
+Going on edge (4,2) edge prob = 100
+On vertex: 2
+Going on edge (2,5) edge prob = 100
+On vertex: 5
+Going on edge (5,3) edge prob = 70% r = 52
+On vertex: 3
+Going on edge (3,8) edge prob = 50% r = 34
+On vertex: 8
+Cannot go on edge (8,9) edge prob = 10% r = 48
+Backtracking to vertex: 3
+On vertex: 3
+Backtracking to vertex: 5
+On vertex: 5
+Backtracking to vertex: 2
+On vertex: 2
+Backtracking to vertex: 4
+On vertex: 4
+Backtracking to vertex: 1
+On vertex: 1
+Going on edge (1,6) edge prob = 100
+On vertex: 6
+Going on edge (6,9) edge prob = 100
+Total DFS hops = 15
+Total DFS misses = 9
+Path = [0, 1, 4, 7, 4, 2, 5, 3, 8, 3, 5, 2, 4, 1, 6, 9]
